@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "MgOpen Cosmetica";
+	font-weight: 400;
+	font-style: normal;
+	src: url(./fonts/MgOpenCosmeticaRegular.ttf);
+}
+@font-face {
+	font-family: "MgOpen Cosmetica";
+	font-weight: 700;
+	font-style: normal;
+	src: url(./fonts/MgOpenCosmeticaBold.ttf);
+}
+@font-face {
+	font-family: "MgOpen Cosmetica";
+	font-weight: 400;
+	font-style: italic;
+	src: url(./fonts/MgOpenCosmeticaOblique.ttf);
+}
+@font-face {
+	font-family: "MgOpen Cosmetica";
+	font-weight: 700;
+	font-style: italic;
+	src: url(./fonts/MgOpenCosmeticaBoldOblique.ttf);
+}

@@ -51,19 +51,18 @@
 			}
 
 		</script>		
-		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='cosmetica.css' rel='stylesheet' type='text/css'>
 		<style>
 			HTML { height: 100%; }
 			BODY { height:100%; margin: 0px; padding: 0px;}
 			BODY,P,UL LI, OL LI, TD, TH, DIV {
-				font-size: 16px;
-				font-family: "Bitstream Charter", Georgia,serif;
+				font-size: 14pt;
+				font-family: "MgOpen Cosmetica", "Bitstream Charter", Georgia,serif;
+				-webkit-font-smoothing: subpixel-antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
-			h1,h2,h3,p,div {
-
-			}
-		
+			H1 { font-size: 24pt;}
+			H3 { font-size: 18pt;}
 
 			@media(min-width: 768px) {
 				#container {
@@ -82,8 +81,6 @@
 				}
 			}
 			@media(max-width: 767px) {
-				h1 { font-size 1.8em; }
-				h3 { font-size 1.4em; }
 				#container {
 					width:100%;
 				}
@@ -119,15 +116,21 @@
 						<h1>Francesca De Lucca</h1>
 						<h3>Psicologo Psicoterapeuta</h3>
 					</div>
-					<p>Riceve su appuntamento presso:</p>
-					<p class="studio">
-					Via Ludovico Ariosto 4<br/>
-					42012 Bibbiano (RE)<br />
-					Tel. +39 3403946998
+					<div class="box-contatti">
+						<p>Recapito telefonico e segreteria: <b>+39 340 39 46 998</b></p>
+						<h3>Email</h3>
+						<ul>
+							<li><tt>f.delucca3249a @ ordpsicologier.it</tt></li>
+							<li>PEC: <tt>francesca.delucca@psypec.it</tt></li>
+						</ul>
+					</div>
+					<div class="piva">
+					<p>
+					Iscritta all' Ordine degli Psicologi dell'Emilia-Romagna N°Albo <b>3249 sez. A</b>
+					<br>
+					P.IVA <b>02701530350</b>
 					</p>
-					<p style="font-size:0.85em;">
-					P.IVA 02701530350
-					</p>
+					</div>
 				</div>
 			</div>
 			<div id="map">
