@@ -30,6 +30,18 @@
 			var plotlist;
 			var plotlayers=[];
 
+			var mail = [
+				{"user" : "f.delucca3249a", "domain" : "ordpsicologier.it" },
+				{"user" : "francesca.delucca", "domain" : "psypec.it" }
+			]
+
+			function dom(n) {
+				var my_mail = "mailto:" +mail[n]["user"] + "@" + mail[n]["domain"];
+				alert (my_mail)
+				window.location.href = my_mail
+
+			}
+
 			function initmap() {
 				// set up the map
 				map = new L.Map('map');
@@ -130,11 +142,10 @@
 					<div class="box-contatti">
 						<p><b>Recapito telefonico e segreteria:</b><br/>
 						<span class="phone">(+39) 340 3946998</span></p>
-						<p><b>Email:</b></p>
-						<ul>
-							<li style="white-space:nowrap;"><span class="mail">f.delucca3249a @ ordpsicologier.it</span></li>
-							<li style="white-space:nowrap;"><span class="mail">francesca.delucca @ psypec.it</span></li>
-						</ul>
+						<p>
+						<b><a id="my_email" onclick="dom(0);" href="#">Email</a></b> |
+						<b><a id="my_pec" onclick="dom(1);" href="#">PEC</a></b>
+						</p>
 					</div>
 					<div class="piva">
 					<p>
