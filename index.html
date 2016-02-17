@@ -4,7 +4,10 @@
 		<title>Dottoressa Francesca De Lucca, Psicologo e Psicoterapeuta in Bibbiano, Val d'Enza (RE), Reggio Emilia</title>
 		<link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
 		<link rel="stylesheet" href="css/min.css" />
-		<meta tag="Description" content="Dottoressa Francesca De Lucca, Psicologo e Psicoterapeuta in Bibbiano, Val d'Enza (RE), Reggio Emilia">
+		<meta name="Description" content="Dottoressa Francesca De Lucca, Psicologo e Psicoterapeuta specializzata in analisi immaginativa in Bibbiano, Val d'Enza (RE), Reggio Emilia">
+		<meta property="og:description" content="Dottoressa Francesca De Lucca, Psicologo e Psicoterapeuta specializzata in analisi immaginativa in Bibbiano, Val d'Enza (RE), Reggio Emilia">
+		<meta property="og:title" content="Dottoressa Francesca De Lucca, Psicologo e Psicoterapeuta in Bibbiano, Val d'Enza (RE), Reggio Emilia">
+		<meta property="og:url" content="http://psicoterapeutavaldenza.it">
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.9">
 		<script src="bower_components/leaflet/dist/leaflet.js"></script>
@@ -31,12 +34,12 @@
 			var plotlayers=[];
 
 			var mail = [
-				{"user" : "f.delucca3249a", "domain" : "ordpsicologier.it" },
-				{"user" : "francesca.delucca", "domain" : "psypec.it" }
+				{"user" : "f.delucca3249a", "domain" : "ordpsicologier" },
+				{"user" : "francesca.delucca", "domain" : "psypec" }
 			]
 
 			function dom(n) {
-				var my_mail = "mailto:" +mail[n]["user"] + "@" + mail[n]["domain"];
+				var my_mail = "mailto:" +mail[n]["user"] + "@" + mail[n]["domain"]+".it";
 				window.location.href = my_mail
 
 			}
@@ -76,6 +79,7 @@
 			}
 			H1 { font-size: 32pt;}
 			H3 { font-size: 18pt;}
+			H4 { font-size: 16pt; margin:0px; margin-top: 12pt; }
 			.mail {
 				letter-spacing: -1px;
 				font-family: "Inconsolata","Consolas","Monaco","Courier new","Courier";
@@ -126,6 +130,9 @@
 				margin-left: 0px;
 				padding-left: 0px ;
 			}
+			.box-contatti P {
+				margin: 0.2em 0;
+			}
 			.informazioni {margin: 1em;}
 			.box-title H1, .box-title H3 {font-weight: normal;}
 		</style>
@@ -135,12 +142,22 @@
 			<div id="cell-1">
 				<div class="informazioni">
 					<div class="box-title">
-						<h1>Francesca<br />De Lucca</h1>
+						<h1>Dottoressa Francesca De Lucca</h1>
 						<h3>Psicologo Psicoterapeuta</h3>
 					</div>
 					<div class="box-contatti">
-						<p><b>Recapito telefonico e segreteria:</b><br/>
-						<span class="phone">(+39) 340 3946998</span></p>
+						<div class="studio">
+							<h4>Studio:</h4>
+							<p>
+							<span style="font-size:1.2em;">Via Ariosto 1<br>42021 Bibbiano (RE)</span>
+							</p>
+						</div>
+						<div class="telefono">
+							<h4>Telefono e segreteria</h4>
+							<p>
+							<span style="font-size:1.2em;">340 3946998</span>
+							</p>
+						</div>
 						<p>
 						<b><a id="my_email" onclick="dom(0);" href="#">Email</a></b> |
 						<b><a id="my_pec" onclick="dom(1);" href="#">PEC</a></b>
