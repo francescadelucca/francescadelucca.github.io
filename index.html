@@ -28,147 +28,65 @@
 			 		}
 			}		
 		</script>		
-		<script type="text/javascript">
-			var map;
-			var ajaxRequest;
-			var plotlist;
-			var plotlayers=[];
-
-			var mail = [
-				{"user" : "f.delucca3249a", "domain" : "ordpsicologier" },
-				{"user" : "francesca.delucca", "domain" : "psypec" }
-			]
-
-			function dom(n) {
-				var my_mail = "mailto:" +mail[n]["user"] + "@" + mail[n]["domain"]+".it";
-				window.location.href = my_mail
-
-			}
-
-			function initmap() {
-				// set up the map
-				map = new L.Map('map');
-
-				// create the tile layer with correct attribution
-				var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-				var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-				var osm = new L.TileLayer(osmUrl, {minZoom: 9, maxZoom: 19, attribution: osmAttrib});		
-
-				// start the map in South-East England
-				map.setView(new L.LatLng(44.66416, 10.47328),16);
-				map.addLayer(osm);
-
-				//add popup
-				var popup = L.popup()
-				    .setLatLng([44.66416, 10.47328])
-				    .setContent("<div class='popx'><b>Dott.ssa Francesca de Lucca</b><br>Tel. +393403946998</div>")
-				    .openOn(map);
-			}
-
-		</script>		
+		<script type="text/javascript" src="./js/code.js"></script>		
 		<link href='https://fonts.googleapis.com/css?family=Sahitya:400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>		
+		<link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+		<link href='./stylesheets/site.css' rel='stylesheet' type='text/css'>
 		<style>
-			HTML { height: 100%; }
-			BODY { height:100%; margin: 0px; padding: 0px;}
-			BODY,P,UL LI, OL LI, TD, TH, DIV {
-				font-size: 14pt;
-				font-weight: 400;
-				font-family: "Sahitya", "Bitstream Charter", Georgia,serif;
-				-webkit-font-smoothing: subpixel-antialiased;
-				-moz-osx-font-smoothing: grayscale;
+			.nowrap {
+				white-space:nowrap;
 			}
-			H1 { font-size: 36pt;}
-			H3 { font-size: 22pt;}
-			H4 { font-size: 16pt; margin:0px; margin-top: 12pt; }
-			.mail {
-				letter-spacing: -1px;
-				font-family: "Inconsolata","Consolas","Monaco","Courier new","Courier";
-
+			.custom-h1 {
+				text-align:center;margin-bottom:12pt;
 			}
-			span.phone {
-				font-weight: bold;
-				font-size: 18pt;
+			.custom-h3 {
+				margin-top:2pt;text-align:center;
 			}
-			.playball { font-family: "Playball"; }
-			@media(min-width: 768px) {
-				#container {
-					display:table;
-					width:100%;
-					height:100%;
-				}
-				#map {
-					display: table-cell;
-					width:40%;
-					height: 100%;
-				}
-				#cell-1 {
-					width:60%;
-					display: table-cell;
-				}
+			.top-48 {
+				margin-top:48pt;
 			}
-			@media(max-width: 767px) {
-				#container {
-					width:100%;
-				}
-				#map {
-					width:100%;
-					height:360px;
-				}
-				#cell-1 {
-					width:100%;
-					text-align: center;
-					margin-bottom: 2em;
-				}
+			.top-12 {
+				margin-top:12pt;
 			}
-			.popx {
-				font-family: sans-serif;
-				font-size: 0.8em;
-				text-align: center;
+			.p-r-20 {
+				padding-right:20px;			
 			}
-			.box-contatti P {
-				margin: 0.2em 0;
+			.font-1-2em {
+				font-size:1.2em;
 			}
-			ul#mail {
-				list-style-type: none;
-				margin-left: 0px;
-				padding-left:  0px;
-			}
-			.informazioni {margin: 1em;}
-			.box-title H1, .box-title H3 {font-weight: normal;}
-		</style>
+		</style>				
 	</head>
 	<body>
 		<div id="container">
 			<div id="cell-1">
 				<div class="informazioni">
 					<div class="box-title">
-						<h1 class="playball" style="text-align:center;margin-bottom:12pt;">Dott.ssa Francesca <span style="white-space:nowrap;">De Lucca</span></h1>
-						<h3 class="playball" style="margin-2pt;text-align:center;">Psicologo Psicoterapeuta</h3>
+						<h1 class="playball custom-h1" >Dott.ssa Francesca <span class="nowrap">De Lucca</span></h1>
+						<h3 class="playball custom-h3" >Psicologo Psicoterapeuta</h3>
 					</div>
 					<div class="box-contatti">
-						<div class="studio" style="margin-top:48pt;">
+						<div class="studio" class="top-48">
 							<h4>Studio Professionale</h4>
 							<p>
-							<span style="font-size:1.2em;">Via Ariosto 1<br>42021 Bibbiano (RE)</span>
+							<span class="font-1-2em">Via Ariosto 1<br>42021 Bibbiano (RE)</span>
 							</p>
 						</div>
-						<div class="telefono" style="margin-top:12pt;">
+						<div class="telefono" class="top-12">
 							<h4>Telefono e segreteria</h4>
 							<p>
-							<span style="font-size:1.2em;">340 3946998</span>
+							<span class="font-1-2em">340 3946998</span>
 							</p>
 						</div>
-						<div class="telefono" style="margin-top:12pt;">
+						<div class="telefono" class="top-12">
 							<ul id="mail">
 							<table border="0">
 								<tr>
-									<td><b>Email</b></td>
+									<td class="p-r-20"><b>Email</b></td>
 									<td>f.delucca3249a@ordpsicologier.it</td>
 								</tr>
 								<tr>
-									<td style="padding-right:20px;"><b>PEC</b></td>
+									<td class="p-r-20"><b>PEC</b></td>
 									<td>francesca.delucca@psypec.it</td>
 								</tr>
 							</table>
@@ -176,7 +94,7 @@
 					</div>
 					<div class="piva">
 					<p>
-					Ordine degli Psicologi <span style="white-space:nowrap;">dell'Emilia Romagna</span> N°Albo <b>3249 sez. A</b>
+					Ordine degli Psicologi <span class="nowrap">dell'Emilia Romagna</span> N°Albo <b>3249 sez. A</b>
 					<br>
 					P.IVA <b>02701530350</b>
 					</p>
