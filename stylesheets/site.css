@@ -66,3 +66,29 @@ ul#mail {
 }
 .informazioni {margin: 1em;}
 .box-title H1, .box-title H3 {font-weight: normal;}
+
+.nowrap {
+	white-space:nowrap;
+}
+.custom-h1 {
+	text-align:center;margin-bottom:12pt;
+}
+.custom-h3 {
+	margin-top:2pt;text-align:center;
+}
+.top-48 {
+	margin-top:48pt;
+}
+.top-12 {
+	margin-top:12pt;
+}
+.top-24 {
+	margin-top:12pt;
+}
+.p-r-20 {
+	padding-right:20px;			
+}
+.font-1-2em {
+	font-size:1.2em;
+}
+
