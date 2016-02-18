@@ -9,6 +9,7 @@ BODY,P,UL LI, OL LI, TD, TH, DIV {
 }
 H1 { font-size: 36pt;}
 H3 { font-size: 22pt;}
+.h3 {font-size:22pt;}
 H4 { font-size: 16pt; margin:0px; margin-top: 12pt; }
 .mail {
 	letter-spacing: -1px;
